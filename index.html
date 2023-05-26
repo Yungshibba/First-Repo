@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <script>
+    function myFunction() {
+      const currentDate = new Date();
+      const currentHour = currentDate.getHours();
+      let person = prompt("Enter your name: ");
+      if (person == "") {
+        alert("User cancelled the prompt.");
+      } else {
+        if (currentHour < 12) {
+          alert("Good Morning " + person + ", Thank you for reviewing my site!");
+        } else if (currentHour < 18) {
+          alert("Good Afternoon " + person + ", Thank you for reviewing my site!");
+        } else {
+          alert("Good Evening " + person + ", Thank you for reviewing my site!");
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+        <h4>About Me</h4>
+
+
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<body onload="myFunction()">
+    
+    <br><br><br><br><br><br>
+  <p id="refer"></p>
+  <img class= "me" src="images/circle.png" alt="Me" class="left" />
+  <div class="container">
+      <p>Hello and welcome to my portfolio! I would like to tell you a little bit about myself. My name is Angelo Castillo, I graduated from Timpview high school with a high school diploma in 2018.
+
+        I love art and I love learning new things. I live with my wife Victoria, and  I have 2 handsome cats named Choko Flan and Tiramisu! I am also blessed with the advantage of being bilingual!I am fluent in English and Spanish.  
+        
+        My biggest goals in life are to travel the world and excel in my career. 
+        
+         I am 23 years old, and I am sure I am not alone in the fact that I struggled to see a career path for myself that I felt confident in.  
+        
+         I am currently learning how to code so I can build a future career and follow my passions. I truly consider myself lucky to have such a great interest in coding. a highly successful man once said,  
+        
+        "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do." - Steve Jobs 
+        
+        Thank you for visiting my page. (P.S. do not forget to vote on which cat you think is best.)</p>
+    </div>
+
+    <div class=" form-container">
+      <div class="card">
+        <div class="left">
+          <img src="/images/tira and choko.jpg">
+        </div>
+        <div class="right">
+          <h2>Contact Me</h2>
+          <div class="contact">
+            <div class="form-container">
+              <form class="form">
+                <div class="username">
+                  <input type="text" placeholder="Enter your Name">
+                </div>
+                <div class="useremail">
+                  <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="usermessage">
+                  <textarea placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="usersubmit">
+                  <input type="submit" value="Contact Us">
+                </div>
+              </form>
+            </div>
+            <div class="address">
+              <div class="email">
+                <h4>Contact</h4>
+                <p>Angelo1433@hotmail.com</p>
+              </div>
+              <div class="location">
+                <h3>Located at</h3>
+                <p>Provo,<br>Utah</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+
+</html>

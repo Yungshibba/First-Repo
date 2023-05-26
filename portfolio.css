@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: #087e8b;
+  }
+  
+  .logo {
+    text-transform: uppercase;
+    color: rgb(240, 240, 240);
+    font-size: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 30%;
+    transform: translateX(0px);
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    display: block;
+    color: #e2e2e2;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0.5em;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background: #e2e2e2;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .nav-items {
+      width: 60%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    .nav-links {
+      position: absolute;
+      right: 0;
+      top: 7vh;
+      height: 92vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #087e8b;
+      transform: translateX(100vw);
+      animation: navSlideOut 0s forwards;
+    }
+  
+    ul.nav-off {
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+    .burger {
+      display: block;
+    }
+  
+    .nav-active {
+      animation: navSlide 0.5s ease both;
+    }
+  
+    .nav-off {
+      animation: navSlideOut 0.5s ease both;
+    }
+  }
+  
+  /* normally you could simplify with just the 'to', but we need to reset the translating */
+  @keyframes navSlide {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes navSlideOut {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes navFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .toggle .line1 {
+    transform: rotate(-135deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(135deg) translate(-5px, -6px);
+  }
+  
